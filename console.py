@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 
 """ AirBnB Console """
@@ -21,11 +21,11 @@ class HBNBCommand(cmd.Cmd):
     __all_117 = 0
 
     def emptyline(self):
-        """Do nothing on empty input"""
+        """Pass if no command is given"""
         pass
 
     def precmd(self, line):
-        """Process the line before execution"""
+        """ Edit given command to allow second type of input"""
         if not sys.stdin.isatty():
             print()
         if '.' in line:
@@ -37,16 +37,16 @@ class HBNBCommand(cmd.Cmd):
         return cmd.Cmd.precmd(self, line)
 
     def do_quit(self, arg):
-        """Quit command to exit the program"""
+        'Quit command to exit the program'
         return True
 
     def do_EOF(self, arg):
-        """EOF command to exit the program"""
+        'EOF command to exit the program'
         print()
         return True
 
     def do_create(self, arg):
-        """Create an instance if the Model exists"""
+        "Create an instance if the Model exists"
         if not arg:
             print("** class name missing **")
             return None
@@ -54,26 +54,26 @@ class HBNBCommand(cmd.Cmd):
             my_model = eval(arg + "()")
             my_model.save()
             print(my_model.id)
-        except:
+        except Exception:
             print("** class doesn't exist **")
 
     def do_show(self, arg):
-        """Print the string representation of an instance"""
+        "Print dict of a instance in base of it's ID"
         cmd_argv = arg.split()
         if not cmd_argv:
             print("** class name missing **")
             return None
         try:
             eval(cmd_argv[0])
-        except:
+        except Exception:
             print("** class doesn't exist **")
             return None
 
         all_objs = storage.all()
 
         if len(cmd_argv) < 2:
-                print("** instance id missing **")
-                return None
+            print("** instance id missing **")
+            return None
 
         cmd_argv[1] = cmd_argv[1].replace("\"", "")
         key = cmd_argv[0] + '.' + cmd_argv[1]
@@ -90,7 +90,7 @@ class HBNBCommand(cmd.Cmd):
         if cmd_argv:
             try:
                 eval(cmd_argv[0])
-            except:
+            except Exception:
                 print("** class doesn't exist **")
                 return None
 
@@ -124,15 +124,15 @@ class HBNBCommand(cmd.Cmd):
             return None
         try:
             eval(cmd_argv[0])
-        except:
+        except Exception:
             print("** class doesn't exist **")
             return None
 
         all_objs = storage.all()
 
         if len(cmd_argv) < 2:
-                print("** instance id missing **")
-                return None
+            print("** instance id missing **")
+            return None
 
         cmd_argv[1] = cmd_argv[1].replace("\"", "")
         key = cmd_argv[0] + '.' + cmd_argv[1]
@@ -190,7 +190,7 @@ class HBNBCommand(cmd.Cmd):
 
         try:
             eval(cmd_argv[0])
-        except:
+        except Exception:
             print("** class doesn't exist **")
             return None
 
@@ -209,7 +209,7 @@ class HBNBCommand(cmd.Cmd):
                         type_att = getattr(all_objs[key], cmd_argv[i], "")
                         try:
                             cast_val = type(type_att)(cmd_argv[i + 1])
-                        except:
+                        except Exception:
                             cast_val = type_att
                         setattr(all_objs[key], cmd_argv[i], cast_val)
                         all_objs[key].save()
@@ -229,7 +229,7 @@ class HBNBCommand(cmd.Cmd):
         if cmd_argv:
             try:
                 eval(cmd_argv[0])
-            except:
+            except Exception:
                 print("** class doesn't exist **")
                 return None
 
