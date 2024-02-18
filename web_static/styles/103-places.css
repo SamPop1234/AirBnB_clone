@@ -1,0 +1,222 @@
+.places h1 {
+  margin-left: 20px;
+  font-size: 30px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+article {
+  width: 390px;
+  padding: 20px;
+  margin: 20px;
+  border: #ff5a5f 1px solid;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 30px;
+  flex-direction: column;
+  position: relative;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.places {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.home {
+  margin-left: 35px;
+  display: flex;
+}
+
+.house {
+  display: flex;
+  margin-left: 35px;
+}
+
+.suite {
+  display: flex;
+  margin-left: 35px;
+}
+
+.price_by_night {
+  color: #ff5a5f;
+  border: #ff5a5f solid 4px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 45px;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
+  right: 20px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 6%;
+}
+
+.information {
+  margin-top: 40px;
+  height: 80px;
+  border-top: solid #dddddd 1px;
+  border-bottom: solid #dddddd 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.max_guest {
+  width: 100px;
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  justify-content: center;
+}
+.guest_icon {
+  height: inherit;
+  width: inherit;
+  background: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_group.png);
+  background-repeat: no-repeat;
+  margin-left: 35px;
+}
+.guest_number h2 {
+  font-size: 15px;
+  padding-left: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.number_rooms {
+  width: 100px;
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  justify-content: center;
+}
+.rooms_icon {
+  height: inherit;
+  width: inherit;
+  background: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bed.png);
+  background-repeat: no-repeat;
+  margin-left: 35px;
+}
+.rooms_number h2 {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
+}
+
+.number_bathrooms {
+  width: 110px;
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  justify-content: center;
+}
+.bathrooms_icon {
+  height: inherit;
+  width: inherit;
+  background: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bath.png);
+  background-repeat: no-repeat;
+  margin-left: 35px;
+}
+.bathrooms_number h2 {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
+  width: 100px;
+}
+
+span {
+  font-weight: bolder;
+}
+
+.user {
+  font-size: 50%;
+  padding-left: 0%;
+  text-align: left;
+  padding-top: 6%;
+}
+
+.description {
+  padding-top: 3%;
+  text-align: left;
+  font-size: 50%;
+  float: left;
+}
+
+.house .description {
+  padding-bottom: 0%;
+}
+
+.places .amenities {
+  margin-top: 40px;
+}
+
+.places .amenities h2 {
+  font-size: 20px;
+  text-align: left;
+  border-bottom: #dddddd solid 1px;
+  padding-bottom: 10px;
+}
+
+.places .amenities li {
+  font-size: 50%;
+  text-align: left;
+  padding-left: 40px;
+  padding-bottom: 15px;
+}
+
+.tv {
+  background: url(../images/icon_tv.png) no-repeat;
+  background-size: 25px;
+  background-position: 0px;
+  background-position-y: -3px;
+  margin-left: 12px;
+  padding-left: 25px;
+}
+
+.wifi {
+  background: url(../images/icon_wifi.png) no-repeat;
+  background-size: 25px;
+  background-position: 0px;
+  background-position-y: -3px;
+  margin-left: 12px;
+  padding-left: 25px;
+}
+
+.pets {
+  background: url(../images/icon_pets.png) no-repeat;
+  background-size: 25px;
+  background-position: 0px;
+  background-position-y: -3px;
+  margin-left: 12px;
+  padding-left: 25px;
+}
+
+.places .Reviews h2 {
+  font-size: 20px;
+  text-align: left;
+  border-bottom: #dddddd solid 1px;
+  padding-bottom: 10px;
+}
+
+.places .Reviews li {
+  font-size: 50%;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.places .Reviews ul {
+  padding-left: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.places .Reviews .li2 {
+  font-size: 50%;
+  text-align: left;
+  padding-bottom: 78px;
+}
